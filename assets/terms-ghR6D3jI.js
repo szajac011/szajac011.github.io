@@ -1,0 +1,1 @@
+import{l as e}from"./utils-Dkih7pL3.js";import{n as t,r as n}from"./legal-DI4pQZwn.js";var r=e();function i(){return(0,r.jsx)(n,{doc:t})}export{i as component};

@@ -1,2 +1,1 @@
-# szajac011.github.io
-Budget Survival: a gothic horror budget game
+Budget Survival static site (build 184805f) for https://szajac011.github.io/
