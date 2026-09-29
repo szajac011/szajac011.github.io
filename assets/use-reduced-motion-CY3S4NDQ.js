@@ -1,0 +1,1 @@
+import{I as e,P as t}from"./utils-Dkih7pL3.js";import{i as n,o as r}from"./dataStore-CUGF9Mvn.js";var i=e(t(),1);function a(){return(0,i.useSyncExternalStore)(n.subscribe,r,()=>!1)}export{a as t};

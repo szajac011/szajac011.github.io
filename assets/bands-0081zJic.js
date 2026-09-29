@@ -1,0 +1,1 @@
+import{g as e,x as t}from"./dataStore-CUGF9Mvn.js";import{t as n}from"./score-NijtU-Jv.js";function r(r){let i=n(r),a=i===0?`critical`:i<1?`danger`:i>=75?`fortified`:i>=50?`holding`:i>=25?`breached`:`danger`;return{key:a,label:e[a],eaters:t[a]}}export{r as t};
