@@ -1,0 +1,8 @@
+# Learning Lab is an unlisted personal study app.
+# Crawlers that fetch this file (when it is the site root) should stay out.
+# On GitHub Pages this file lives under the sub-path, so also add the
+# folder to the domain-root robots.txt. The HTML noindex tag is the
+# reliable signal for this sub-path.
+
+User-agent: *
+Disallow: /
