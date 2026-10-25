@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
     <meta name="robots" content="noindex,nofollow" />
     <meta name="googlebot" content="noindex,nofollow" />
     <meta name="referrer" content="no-referrer" />
@@ -14,11 +15,49 @@
     <meta name="apple-mobile-web-app-title" content="Learning Lab" />
     <link rel="icon" href="/study-6c9e93b942c8/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/study-6c9e93b942c8/icon-192.png" />
+    <link rel="manifest" href="/study-6c9e93b942c8/manifest.webmanifest" />
     <title>Learning Lab</title>
+    <script>
+      (function () {
+        var prefix = "/study-6c9e93b942c8";
+        var path = location.pathname;
+        if (path.indexOf(prefix + "/") !== 0) return;
+        var rest = path.slice(prefix.length).replace(/\/+$/, "");
+        if (!rest || rest === "/" || location.hash.indexOf("#/") === 0) return;
+        if (/\.[a-z0-9]+$/i.test(rest) || rest.indexOf("\\") !== -1 || rest.indexOf("//") !== -1) return;
+        if (rest.charAt(0) !== "/") rest = "/" + rest;
+        location.replace(prefix + "/" + location.search + "#" + rest);
+      })();
+    </script>
     <script type="module" crossorigin src="/study-6c9e93b942c8/assets/index-BPojHD77.js"></script>
-    <link rel="stylesheet" crossorigin href="/study-6c9e93b942c8/assets/index-37lODM5F.css">
-  <link rel="manifest" href="/study-6c9e93b942c8/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/study-6c9e93b942c8/registerSW.js"></script></head>
+    <link rel="stylesheet" crossorigin href="/study-6c9e93b942c8/assets/index-37lODM5F.css" />
+    <script id="vite-plugin-pwa:register-sw" src="/study-6c9e93b942c8/registerSW.js"></script>
+  </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <p>Learning Lab needs JavaScript. Your notes stay on this device once it can run.</p>
+    </noscript>
+    <script>
+      (function () {
+        var root = document.getElementById("root");
+        if (!root || !window.MutationObserver) return;
+        var scheduled = false;
+        function syncTitle() {
+          scheduled = false;
+          var heading = document.querySelector("#main h1");
+          var name = heading && heading.textContent.replace(/\s+/g, " ").trim();
+          var next = name ? name + " · Learning Lab" : "Learning Lab";
+          if (document.title !== next) document.title = next;
+        }
+        function queue() {
+          if (scheduled) return;
+          scheduled = true;
+          requestAnimationFrame(syncTitle);
+        }
+        new MutationObserver(queue).observe(root, { subtree: true, childList: true, characterData: true });
+        window.addEventListener("hashchange", queue);
+      })();
+    </script>
   </body>
 </html>

@@ -1,6 +1,10 @@
 {
   "name": "Budget Survival",
+  "short_name": "Budget Survival",
+  "description": "Each month is a survival run. Keep the gate shut.",
+  "lang": "en",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#0E0E12",
   "theme_color": "#0E0E12",
@@ -8,7 +12,8 @@
     {
       "src": "__grok/icon-180.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
