@@ -1,0 +1,8 @@
+# Budget Survival is the public site.
+# Learning Lab is an unlisted personal study app. The pages also send noindex.
+
+User-agent: *
+Disallow: /study-6c9e93b942c8/
+Allow: /
+
+Sitemap: https://szajac011.github.io/sitemap.xml
